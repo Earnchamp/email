@@ -39,7 +39,7 @@ const sendMail = async (req, res) => {
           link: `${base_url}/verify/${otp}`,
         },
       },
-      outro: `If you did not create an account, no further action is required. <br><br> Thank you! <br><br> ${user} Team <br><br><br><p style="font-size:11px;">Disclaimer: We received a request on ${user} website from IP: ${get_client_ip}</p>`,
+      outro: `If you did not create an account, no further action is required. <br><br> Thank you! <br><br> ${user} Team <br><br><br><p style="font-size:11px;">Disclaimer: We received a request on ${user} website from IP: ${ip}</p>`,
     },
   };
 
