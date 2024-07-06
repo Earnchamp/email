@@ -5,10 +5,9 @@ const sendMail = async (req, res) => {
   const apiKey = process.env.SECRET;
   const { toAddress, name, base_url, user, ip, otp, key } = req.body;
 
-  if (!toAddress || !name || !base_url || !user || !ip || !otp || !key)
-    return res
-      .status(500)
-      .json({ status: false, message: "The required keys are not present" });
+  if (!toAddress || !name || !base_url || !user || !ip || !otp || !key) {
+    return res.status(500).json({ status: false, message: "The required keys are not present" });
+  }
 
   const config = {
     service: "gmail",
